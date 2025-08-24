@@ -14,13 +14,13 @@
         <div class="flex items-center gap-2 ">
             <img src="./assets/Group.png" alt="" class="size-[50px] cursor-pointer">
             <div>
-                <p class="font-extrabold text-[18px]">$ <span>45000</span></p>
+                <p class="font-extrabold text-[18px]">$ <span id="available-balance">45000</span></p>
                 <p class="text-[14px] text-[#02020281]">Available Balance</p>
             </div>
         </div>
         <div class="button-div flex justify-center items-center ">
             <button
-                class="flex items-center gap-1 text-[#02020281] border-[1px] px-[12px] py-1  border-gray-200 rounded-lg cursor-pointer hover:bg-white transition-all text-[14px]"><img
+                class="flex items-center gap-1 text-[#02020281] border-[1px] px-[12px] py-1  border-gray-200 rounded-lg cursor-pointer hover:bg-[#F4F5F7] transition-all text-[14px]"><img
                     src="./assets/sign Out.png" alt="" class="w-5 h-5">Log Out</button>
         </div>
     </div>
@@ -31,69 +31,162 @@
             Cashout charge is low and </p>
     </div>
 
-    <section class="action grid grid-cols-3 gap-4 p-4 rounded-bl-4xl rounded-br-4xl px-[24px] bg-white pt-8">
-        <div
+    <section class="action-section grid grid-cols-3 gap-4 p-4 rounded-bl-4xl rounded-br-4xl px-[24px] bg-white pt-8">
+        <div id="add-money"
             class="flex flex-col items-center justify-center border-[1px] border-gray-200 rounded-xl cursor-pointer py-[20px]">
             <img src="./assets/wallet1.png" alt="" class="mx-auto ">
             <p class="text-center">Add Money</p>
         </div>
-        <div
+        <div id="cash-Out"
             class="flex flex-col items-center justify-center border-1 border-gray-200 rounded-xl cursor-pointer py-[20px] ">
             <img src="./assets/send1.png" alt="" class="mx-auto">
             <p class="text-center">Cash Out</p>
         </div>
-        <div
+        <div id="transfer-money"
             class="flex flex-col items-center justify-center  border-1 border-gray-200 rounded-xl cursor-pointer py-[20px]">
             <img src="./assets/money1.png" alt="" class="mx-auto">
             <p class="text-center text-[14px]">Transfer Money</p>
         </div>
-        <div
+        <div id="get-bonus"
             class="flex flex-col items-center justify-center border-1 border-gray-200 rounded-xl cursor-pointer py-[20px]">
             <img src="./assets/bonus1.png" alt="" class="mx-auto">
             <p class="text-center">Get Bonus</p>
         </div>
-        <div
+        <div id="pay-bill"
             class="flex flex-col items-center justify-center  border-1 border-gray-200 rounded-xl cursor-pointer py-[20px]">
             <img src="./assets/purse1.png" alt="" class="mx-auto">
             <p class="text-center">Pay Bill</p>
         </div>
-        <div
+        <div id="transaction"
             class="flex flex-col items-center justify-center  border-1 border-gray-200 rounded-xl cursor-pointer py-[20px]">
             <img src="./assets/transaction1.png" alt="" class="mx-auto">
             <p class="text-center">Transaction</p>
         </div>
     </section>
 
-    <section class="addmoneyForm ">
+    <section id="addmoneyForm" >
         <!-- add money -->
         <div class="p-[24px]">
-            <h1>Add Money</h1>
-            <form class="p-[24px] rounded-[24px] bg-white">
+            <h1 class="text-[18px] font-semibold text-[#000000e1]">Add Money</h1>
+            <form class="p-[24px] rounded-[24px] bg-white mt-[16px]">
                 <label for="" class="text-[16px] text-[#000000a2] font-semibold block">Select a Bank</label>
-                <select id="bank-select" type="select" placeholder="Select a Bank" 
-                    class="rounded-4xl px-[20px] py-[16px]  w-[338px] bg-[#F4F5F7] mt-[12px] border-none"> 
-                <option value="">Select a Bank</option>
-                <option value="DutchBangla">Dutch Bangla</option>
-                <option value="Rupali">Rupali</option>
-                <option value="Shonali">Shonali</option>
-                <option value="IslamiBank">Islami Bank</option>
+                <select id="bank-select" type="select" placeholder="Select a Bank"
+                    class="rounded-4xl px-[20px] py-[10px]  w-full bg-[#F4F5F7] mt-[12px] border-none">
+                    <option value="">Select a Bank</option>
+                    <option value="DutchBangla">Dutch Bangla</option>
+                    <option value="Rupali">Rupali</option>
+                    <option value="Shonali">Shonali</option>
+                    <option value="IslamiBank">Islami Bank</option>
                 </select>
-                <label for="" class="text-[16px] text-[#000000a2] font-semibold block mt-[12px]">Bank Account Number</label>
+                <label for="" class="text-[16px] text-[#000000a2] font-semibold block mt-[12px]">Bank Account
+                    Number</label>
                 <input id="account-number" type="text" placeholder="Enter 11 digit account number"
-                    class="rounded-4xl px-[20px] py-[16px] w-[338px] bg-[#F4F5F7] mt-[12px] border-none">
+                    class="rounded-4xl px-[20px] py-[10px] w-full bg-[#F4F5F7] mt-[12px] border-none">
                 <label for="" class="text-[16px] text-[#000000a2] font-semibold block mt-[12px]">Amount to Add</label>
-                <input id="withdrawal-ammount" type="text" placeholder="Add Amount to withdraw"
-                    class="rounded-4xl px-[20px] py-[16px] w-[338px] bg-[#F4F5F7] mt-[12px] border-none">
+                <input id="ammount" type="text" placeholder="Add Amount to withdraw"
+                    class="rounded-4xl px-[20px] py-[10px] w-full bg-[#F4F5F7] mt-[12px] border-none">
                 <label for="" class="mt-[12px] block text-[#000000a2] font-semibold">Password</label>
-                <input id="pin-number" type="text" placeholder=" Enter your Password" c
-                    class="rounded-4xl px-[20px] py-[16px] w-[338px] bg-[#F4F5F7] mt-[12px] block border-none text-[#000000a2] font-semibold">
+                <input id="pin-number" type="text" placeholder=" Enter your Password"
+                    class="rounded-4xl px-[20px] py-[10px]  w-full bg-[#F4F5F7] mt-[12px] block border-none text-[#000000a2] font-semibold">
                 <button type="button" id="add-money-btn"
-                    class="btn btn-active btn-primary rounded-4xl w-full mt-4 bg-[#0874F2] border-none ">Add Money</button>
+                    class="btn btn-active btn-primary rounded-4xl w-full mt-4 bg-[#0874F2] border-none text-white">Add
+                    Money</button>
 
             </form>
         </div>
     </section>
+    <section id="cashOutForm" class="hidden">
+        <!-- cash Out -->
+        <div class="p-[24px]">
+            <h1 class="text-[18px] font-semibold text-[#000000e1]">Cash Out</h1>
+            <form class="p-[24px] rounded-[24px] bg-white mt-[16px]">
+                
+                <label for="" class="text-[16px] text-[#000000a2] font-semibold block mt-[12px]">Agent
+                    Number</label>
+                <input id="cashout-account-number" type="text" placeholder="Enter 11 digit number"
+                    class="rounded-4xl px-[20px] py-[10px] w-full bg-[#F4F5F7] mt-[12px] border-none">
+                <label for="" class="text-[16px] text-[#000000a2] font-semibold block mt-[12px]">Amount</label>
+                <input id="cashout-ammount" type="text" placeholder="Add Amount to withdraw"
+                    class="rounded-4xl px-[20px] py-[10px] w-full bg-[#F4F5F7] mt-[12px] border-none">
+                <label for="" class="mt-[12px] block text-[#000000a2] font-semibold">Password</label>
+                <input id="cashout-pin-number" type="text" placeholder=" Enter your Password"
+                    class="rounded-4xl px-[20px] py-[10px]  w-full bg-[#F4F5F7] mt-[12px] block border-none text-[#000000a2] font-semibold">
+                <button type="button" id="cashout-btn"
+                    class="btn btn-active btn-primary rounded-4xl w-full mt-4 bg-[#0874F2] border-none text-white">Withdraw
+                    Money</button>
 
+            </form>
+        </div>
+    </section>
+    <section id="transferMoneyForm" class="hidden" >
+        <!-- transfer money -->
+        <div class="p-[24px]">
+            <h1 class="text-[18px] font-semibold text-[#000000e1]">Transfer Money</h1>
+            <form class="p-[24px] rounded-[24px] bg-white mt-[16px]">
+                
+                <label for="" class="text-[16px] text-[#000000a2] font-semibold block mt-[12px]">User Account
+                    Number</label>
+                <input id="account-number" type="text" placeholder="Enter 11 digit account number"
+                    class="rounded-4xl px-[20px] py-[10px] w-full bg-[#F4F5F7] mt-[12px] border-none">
+                <label for="" class="text-[16px] text-[#000000a2] font-semibold block mt-[12px]">Amount</label>
+                <input id="ammount" type="text" placeholder="Add Amount to withdraw"
+                    class="rounded-4xl px-[20px] py-[10px] w-full bg-[#F4F5F7] mt-[12px] border-none">
+                <label for="" class="mt-[12px] block text-[#000000a2] font-semibold">Password</label>
+                <input id="pin-number" type="text" placeholder=" Enter your Password"
+                    class="rounded-4xl px-[20px] py-[10px]  w-full bg-[#F4F5F7] mt-[12px] block border-none text-[#000000a2] font-semibold">
+                <button type="button" id="add-money-btn"
+                    class="btn btn-active btn-primary rounded-4xl w-full mt-4 bg-[#0874F2] border-none text-white">Transfer
+                    Money</button>
+
+            </form>
+        </div>
+    </section>
+    <section id="getBonusForm" class="hidden">
+        <!-- get Bonus -->
+        <div class="p-[24px]">
+            <h1 class="text-[18px] font-semibold text-[#000000e1]">Get Bonus</h1>
+            <form class="p-[24px] rounded-[24px] bg-white mt-[16px]">
+                
+                <label for="" class="text-[16px] text-[#000000a2] font-semibold block mt-[12px]">Get Bonus Coupon</label>
+                <input id="account-number" type="text" placeholder="Enter Cuopon number"
+                    class="rounded-4xl px-[20px] py-[10px] w-full bg-[#F4F5F7] mt-[12px] border-none">
+                <button type="button" id="add-money-btn"
+                    class="btn btn-active btn-primary rounded-4xl w-full mt-4 bg-[#0874F2] border-none text-white">Get Bonus</button>
+
+            </form>
+        </div>
+    </section>
+     <section id="payBillForm" class="hidden">
+        <!-- Pay bill -->
+        <div class="p-[24px]">
+            <h1 class="text-[18px] font-semibold text-[#000000e1]">Pay Bill</h1>
+            <form class="p-[24px] rounded-[24px] bg-white mt-[16px]">
+                <label for="" class="text-[16px] text-[#000000a2] font-semibold block">Select to Pay</label>
+                <select id="bank-select" type="select" placeholder="Select a Bank"
+                    class="rounded-4xl px-[20px] py-[10px]  w-full bg-[#F4F5F7] mt-[12px] border-none">
+                    <option value="">Select a Bank</option>
+                    <option value="DutchBangla">Dutch Bangla</option>
+                    <option value="Rupali">Rupali</option>
+                    <option value="Shonali">Shonali</option>
+                    <option value="IslamiBank">Islami Bank</option>
+                </select>
+                <label for="" class="text-[16px] text-[#000000a2] font-semibold block mt-[12px]">Biller Account
+                    Number</label>
+                <input id="account-number" type="text" placeholder="Enter biller account number"
+                    class="rounded-4xl px-[20px] py-[10px] w-full bg-[#F4F5F7] mt-[12px] border-none">
+                <label for="" class="text-[16px] text-[#000000a2] font-semibold block mt-[12px]">Amount to Pay</label>
+                <input id="ammount" type="text" placeholder="Add Amount to Pay"
+                    class="rounded-4xl px-[20px] py-[10px] w-full bg-[#F4F5F7] mt-[12px] border-none">
+                <label for="" class="mt-[12px] block text-[#000000a2] font-semibold">Password</label>
+                <input id="pin-number" type="text" placeholder=" Enter your Password"
+                    class="rounded-4xl px-[20px] py-[10px]  w-full bg-[#F4F5F7] mt-[12px] block border-none text-[#000000a2] font-semibold">
+                <button type="button" id="add-money-btn"
+                    class="btn btn-active btn-primary rounded-4xl w-full mt-4 bg-[#0874F2] border-none text-white">Pay bill</button>
+
+            </form>
+        </div>
+    </section>
+<script src="home.js"></script>
 </body>
 
 </html>
